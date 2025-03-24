@@ -1,0 +1,49 @@
+@import '@fontsource/press-start-2p';
+@import '@fontsource/vt323';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(34, 197, 94);
+  font-family: 'VT323', monospace;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.press-start {
+  font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes strobe {
+  0% { background: rgb(0, 255, 0); }
+  20% { background: rgb(34, 197, 94); }
+  40% { background: rgb(0, 255, 50); }
+  60% { background: rgb(50, 255, 0); }
+  80% { background: rgb(0, 200, 0); }
+  100% { background: rgb(0, 255, 0); }
+}
+
+.spin-animation {
+  animation: spin 0.05s linear infinite;
+}
+
+.strobe-effect {
+  animation: strobe 0.1s linear infinite;
+}
