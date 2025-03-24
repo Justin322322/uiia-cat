@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Model } from './components/Model';
-import { Modal } from './components/Modal';
 
 export default function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
